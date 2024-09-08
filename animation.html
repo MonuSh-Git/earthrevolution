@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rotaionandrevolution</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+        }
+
+        .solarsystem {
+            position: relative;
+            width: 400px;
+            height: 400px;
+        }
+
+        .sun {
+            width: 150px;
+            height: 150px;
+            background-color: yellow;
+            box-shadow: 0 0 40px 4px white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .orbit {
+            height: 420px;
+            width: 420px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 1px solid white;
+            border-width: 0 0 0 1px;
+            border-radius: 50%;
+            animation: orbit 10s linear infinite;
+        }
+
+        .earth {
+            width: 50px;
+            height: 50px;
+            background-color: aqua;
+            border-radius: 50%;
+            position: absolute;
+            top: -24px;
+            left: 43%;
+            transform: translate(-50%, 0);
+        }
+
+        .moonorbit {
+            width: 120px;
+            height: 120px;
+            border: 1px solid white;
+            border-width: 0px 0px 0px 1px;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: moonorbit 2s linear infinite;
+        }
+
+        .moon {
+            width: 19px;
+            height: 19px;
+            background-color: gray;
+            border-radius: 50%;
+            position: absolute;
+            top: -8px;
+            left: 37%;
+            transform: translate(-50%, 0);
+}
+
+        @keyframes orbit {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        @keyframes moonorbit {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="solarsystem">
+        <div class="sun"></div>
+        <div class="orbit">
+            <div class="earth">
+                <div class="moonorbit">
+                    <div class="moon"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
